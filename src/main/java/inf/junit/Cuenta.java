@@ -72,13 +72,13 @@ public class Cuenta {
 			 if(arrOfStr[1].equals("CLP")) {
 				 System.out.println("Ha depositado: " + arrOfStr[0] +" CLP");
 				 if(Integer.parseInt(arrOfStr[0])<MINIMO_TRANSACCION ) {
-					 System.out.println("Error: El valor mínimo a retirar es 0");
-					 pw.println(dateFormat.format(date)+ "  -1D Error: Se ha intentado retirar un valor menor al mínimo");
+					 System.out.println("Error: El valor minimo a retirar es 0");
+					 pw.println(dateFormat.format(date)+ "  -1D Error: Se ha intentado retirar un valor menor al minimo");
 					 pw.close();
 					 return -1;
 				 }
 				 this.saldoclp = this.saldoclp + Integer.parseInt(arrOfStr[0]);
-				 System.out.println("Depósito exisoto. Nuevo saldo: " + this.saldoclp + " CLP");
+				 System.out.println("Deposito exisoto. Nuevo saldo: " + this.saldoclp + " CLP");
 				 var x = List.of(Integer.toString(this.saldoclp),"CLP",Integer.toString(this.saldousd),"USD");
 				 pila.add(x);
 				 pw.println(dateFormat.format(date)+ "  Se ha depositado "+arrOfStr[0]+" CLP. Nuevo saldo CLP: "+Integer.toString(this.saldoclp));
@@ -88,13 +88,13 @@ public class Cuenta {
 			 else if(arrOfStr[1].equals("USD")) {
 				 System.out.println("Ha depositado: " + arrOfStr[0]+" USD");
 				 if(Integer.parseInt(arrOfStr[0])<MINIMO_TRANSACCION ) {
-					 System.out.println("Error: El valor mínimo a retirar es 0");
-					 pw.println(dateFormat.format(date)+ " -1D Error: Se ha intentado retirar un valor menor al mínimo");
+					 System.out.println("Error: El valor minimo a retirar es 0");
+					 pw.println(dateFormat.format(date)+ " -1D Error: Se ha intentado retirar un valor menor al minimo");
 					 pw.close();
 					 return -1;
 				 }
 				 this.saldousd = this.saldousd + Integer.parseInt(arrOfStr[0]);
-				 System.out.println("Depósito exitoso. Nuevo saldo: " + this.saldousd + " USD");
+				 System.out.println("Deposito exitoso. Nuevo saldo: " + this.saldousd + " USD");
 				 var x = List.of(Integer.toString(this.saldoclp),"CLP",Integer.toString(this.saldousd),"USD");
 				 pila.add(x);
 				 pw.println(dateFormat.format(date)+"  Se ha depositado "+arrOfStr[0]+" USD. Nuevo saldo USD: "+Integer.toString(this.saldoclp));
@@ -102,15 +102,15 @@ public class Cuenta {
 				 return this.saldousd;
 			 }
 			 else {
-				 System.out.println("Error: Debes ingresar un valor válido");
-				 pw.println(dateFormat.format(date)+ " -2D Error: Se ha ingresado un valor no válido");
+				 System.out.println("Error: Debes ingresar un valor valido");
+				 pw.println(dateFormat.format(date)+ " -2D Error: Se ha ingresado un valor no valido");
 				 pw.close();
 				 return -2;
 			 }
 		 }
 		 else {
-			 System.out.println("Error: Debes ingresar un valor válido");
-			 pw.println(dateFormat.format(date)+ " -3D Error: Se ha ingresado un valor no válido");
+			 System.out.println("Error: Debes ingresar un valor valido");
+			 pw.println(dateFormat.format(date)+ " -3D Error: Se ha ingresado un valor no valido");
 			 pw.close();
 			 return -3;
 		 }
@@ -162,16 +162,16 @@ public class Cuenta {
 				 return this.saldousd;
 			 }
 			 else {
-				 System.out.println("Error: Debes ingresar un valor válido");
-				 pw.println(dateFormat.format(date)+ " -2R Error: Se ha ingresado un valor no válido");
+				 System.out.println("Error: Debes ingresar un valor valido");
+				 pw.println(dateFormat.format(date)+ " -2R Error: Se ha ingresado un valor no valido");
 				 pw.close();
 				 return -2;
 			 }
 		 }
 		 else {
-			 pw.println(dateFormat.format(date)+ " -3R Error: Se ha ingresado un valor no válido");
+			 pw.println(dateFormat.format(date)+ " -3R Error: Se ha ingresado un valor no valido");
 			 pw.close();
-			 System.out.println("Error: Debes ingresar un valor válido");
+			 System.out.println("Error: Debes ingresar un valor valido");
 			 return -3;
 		 }
 		

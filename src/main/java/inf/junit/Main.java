@@ -13,25 +13,25 @@ public class Main {
 		 
 		 while (true) {
 			 if (sesiones<3) {
-				 System.out.println("Ingrese un valor para iniciar sesión:");
+				 System.out.println("Ingrese un valor para iniciar sesion:");
 				 input.nextLine();
 				 sesiones=sesiones+1;
 				 int operaciones=0;
 				 while (true) {
 					 	 if(operaciones >= 4) {
-					 		 System.out.println("Ha alcanzado el numero maximo de operaciones, su sesión se ha cerrado");
+					 		 System.out.println("Ha alcanzado el numero maximo de operaciones, su sesion se ha cerrado");
 					 		 break;
 					 	 }
-						 System.out.println("Bienvenido a Banco Azul, selecciona operación a realizar: \n"
-						 		+ "\"1\" Depósito\r\n" + 
+						 System.out.println("Bienvenido a Banco Azul, selecciona operacion a realizar: \n"
+						 		+ "\"1\" Deposito\r\n" + 
 						 		"\r\n" + 
 						 		"\"2\" Retiro \r\n" + 
 						 		"\r\n" + 
 						 		"\"3\" Ver transacciones\r\n" + 
 						 		"\r\n" + 
-						 		"\"4\" Cerrar sesión");
+						 		"\"4\" Cerrar sesion");
 						 String opcion = input.nextLine();  // Read user input
-						 System.out.println("Ha seleleccionado la opción: " + opcion);  // Output user input
+						 System.out.println("Ha seleccionado la opcion: " + opcion);  // Output user input
  
 						 if (opcion.equals("1")==true) {
 							 operaciones=operaciones+1;
@@ -59,15 +59,15 @@ public class Main {
 							 cuenta.getPila();
 						 }
 						 else if (opcion.equals("4")==true) {
-							 System.out.println("Cerrar Sesión");
+							 System.out.println("Cerrar Sesion");
 							 break;
 						 }
 						 else {
-							 System.out.println("Error: Debe ingresar una opción válida");
+							 System.out.println("Error: Debe ingresar una opcion valida");
 						 }
 				 }
 			 }else {
-				 System.out.println("Se ha alcanzado el numero máximo de sesiones permitidas");
+				 System.out.println("Se ha alcanzado el numero maximo de sesiones permitidas");
 				 break;
 			 }
 		 }
